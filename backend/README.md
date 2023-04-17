@@ -1,4 +1,4 @@
-# Redline Main Hub
+# Base Template Main Hub
 
 ## Installation & updates
 
