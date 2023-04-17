@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<database name="default" defaultIdMethod="native" namespace="PropelService" defaultPhpNamingMethod="underscore" identifierQuoting="true">
+    <table name="admin" idMethod="native" phpName="Admin">
+        <column name="int_id" phpName="IntId" type="INTEGER" primaryKey="true" autoIncrement="true" required="true"/>
+        <column name="fullname" phpName="Fullname" type="LONGVARCHAR" required="false"/>
+        <column name="phonenumber" phpName="Phonenumber" type="LONGVARCHAR" required="false"/>
+        <column name="email" phpName="Email" type="LONGVARCHAR" required="true"/>
+        <column name="passwd" phpName="Passwd" type="LONGVARCHAR" required="true"/>
+        <column name="type" phpName="Type" type="enum" valueSet="UNSET, OWNER, PARTNER" required="true" defaultValue="OWNER"/>
+        <column name="structure" phpName="Structure" type="LONGVARCHAR" required="false"/>
+        <column name="status" phpName="Status" type="enum" valueSet="DISABLED, ENABLED" required="true" defaultValue="ENABLED"/>
+        <column name="last_address" phpName="LastAddress" type="LONGVARCHAR" required="true"/>
+        <column name="callmebot_apikey" phpName="CallMeBotApiKey" type="LONGVARCHAR" required="false"/>
+
+        <behavior name="timestampable"/>
+
+        <unique name="int_id">
+            <unique-column name="int_id"/>
+        </unique>
+        <vendor type="mysql">
+            <parameter name="Engine" value="InnoDB"/>
+        </vendor>
+    </table>
+    <table name="admin_session" idMethod="native" phpName="AdminSession">
+        <column name="int_id" phpName="IntId" type="INTEGER" primaryKey="true" autoIncrement="true" required="true"/>
+        <column name="admin_id" phpName="AdminId" type="INTEGER" required="true"/>
+        <column name="token" phpName="Token" type="char" size="40" required="true"/>
+        <column name="expire_date" phpName="ExpireDate" type="timestamp" required="true"/>
+        <column name="status" phpName="Status" type="enum" valueSet="VALID, INVALID" required="true" defaultValue="VALID"/>
+        <column name="ip_address" phpName="IpAddress" type="LONGVARCHAR" required="true"/>
+
+        <behavior name="timestampable"/>
+
+        <foreign-key foreignTable="admin" onDelete="cascade">
+            <reference local="admin_id" foreign="int_id"/>
+        </foreign-key>
+        <index>
+            <index-column name="admin_id"/>
+            <index-column name="token"/>
+        </index>
+        <unique>
+            <unique-column name="int_id"/>
+        </unique>
+        <vendor type="mysql">
+            <parameter name="Engine" value="InnoDB"/>
+        </vendor>
+    </table>
+    <table name="admin_history" idMethod="native" phpName="AdminHistory">
+        <column name="int_id" phpName="IntId" type="INTEGER" primaryKey="true" autoIncrement="true" required="true"/>
+        <column name="admin_id" phpName="AdminId" type="INTEGER" required="true"/>
+        <column name="action" phpName="Action" type="INTEGER" required="true"/>
+        <column name="session_id" phpName="SessionId" type="INTEGER" required="true"/>
+        <column name="affected" phpName="Affected" type="LONGVARCHAR" required="false"/>
+
+        <behavior name="timestampable"/>
+
+        <foreign-key foreignTable="admin" onDelete="cascade">
+            <reference local="admin_id" foreign="int_id"/>
+        </foreign-key>
+
+        <foreign-key foreignTable="admin_session" onDelete="cascade">
+            <reference local="session_id" foreign="int_id"/>
+        </foreign-key>
+
+        <unique>
+            <unique-column name="int_id"/>
+        </unique>
+
+        <vendor type="mysql">
+            <parameter name="Engine" value="InnoDB"/>
+        </vendor>
+    </table>
+    <table name="structure" idMethod="native" phpName="Structure">
+        <column name="int_id" phpName="IntId" type="INTEGER" primaryKey="true" autoIncrement="true" required="true"/>
+        <column name="code" phpName="Code" type="char" size="40" required="true"/>
+        <column name="name" phpName="Name" type="LONGVARCHAR" required="true"/>
+        <column name="parent" phpName="Parent" type="char" size="40" required="true"/>
+        <column name="status" phpName="Status" type="ENUM" valueSet="DISABLED, ENABLED" required="true" defaultValue="ENABLED"/>
+        <column name="content" phpName="Content" type="json" required="false"/>
+
+        <behavior name="timestampable"/>
+
+        <unique name="int_id">
+            <unique-column name="int_id"/>
+        </unique>
+        <vendor type="mysql">
+            <parameter name="Engine" value="InnoDB"/>
+        </vendor>
+    </table>
+    <table name="partner" idMethod="native" phpName="Partner">
+        <column name="int_id" phpName="IntId" type="INTEGER" primaryKey="true" autoIncrement="true" required="true"/>
+        <column name="code" phpName="Code" type="char" size="40" required="true"/>
+        <column name="name" phpName="Name" type="LONGVARCHAR" required="true"/>
+        <column name="logo" phpName="Logo" type="LONGVARCHAR" required="false"/>
+        <column name="structure" phpName="Structure" type="char" size="40" required="true"/>
+        <column name="status" phpName="Status" type="ENUM" valueSet="DISABLED, ENABLED" required="true" defaultValue="ENABLED"/>
+        <column name="options" phpName="Options" type="json" required="false"/>
+
+        <behavior name="timestampable"/>
+
+        <unique name="int_id">
+            <unique-column name="int_id"/>
+        </unique>
+        <vendor type="mysql">
+            <parameter name="Engine" value="InnoDB"/>
+        </vendor>
+    </table>
+</database>

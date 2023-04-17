@@ -1,0 +1,10 @@
+propel:
+  database:
+    connections:
+      default:
+        adapter: mysql
+        dsn: "mysql:host=pe129576-001.eu.clouddb.ovh.net;port=35719;dbname=redline"
+        user: "redline"
+        password: "Uk12Sxn6sqx0YUW"
+        settings:
+          charset: utf8mb4

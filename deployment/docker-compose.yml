@@ -1,0 +1,69 @@
+version: '3.7'
+services:
+  proxy:
+    image: "${registry_url}/${project_name}-proxy:${version}"
+    ports:
+      - 8080:80
+    build:
+      context: ../
+      dockerfile: ./deployment/proxy.Dockerfile
+    environment:
+      NGINX_WORKER_PROCESSES: 20
+    depends_on:
+      - backend
+    deploy:
+      mode: global
+      update_config:
+        delay: 5s
+        order: start-first
+  redis:
+    image: redis
+    restart: unless-stopped
+    environment:
+      TZ: Europe/Rome
+    deploy:
+      replicas: 1
+  backend:
+    image: "${registry_url}/${project_name}-backend:${version}"
+    restart: unless-stopped
+    dns: 8.8.8.8
+    depends_on:
+      - redis
+    environment:
+      TZ: $DEFAULT_TIMEZONE
+      ENVIRONMENT: $ENVIRONMENT
+      DB_DSN: $DATABASE_DSN
+      DB_HOST: $DATABASE_HOST
+      DB_USER: $DATABASE_USER
+      DB_PASS: $DATABASE_PASS
+      DB_NAME: $DATABASE_NAME
+      DB_PORT: $DATABASE_PORT
+      REDIS_HOST: $REDIS_HOST
+    build:
+      context: ../
+      dockerfile: ./deployment/backend.Dockerfile
+    deploy:
+      mode: global
+      update_config:
+        delay: 5s
+        order: start-first
+  cronjob:
+    image: "${registry_url}/${project_name}-cronjob:${version}"
+    restart: unless-stopped
+    dns: 8.8.8.8
+    environment:
+      TZ: $DEFAULT_TIMEZONE
+      ENVIRONMENT: $ENVIRONMENT
+      DB_DSN: $DATABASE_DSN
+      DB_HOST: $DATABASE_HOST
+      DB_USER: $DATABASE_USER
+      DB_PASS: $DATABASE_PASS
+      DB_NAME: $DATABASE_NAME
+      DB_PORT: $DATABASE_PORT
+      REDIS_HOST: $REDIS_HOST
+      version: $version
+    links:
+      - redis
+    build:
+      context: ../
+      dockerfile: ./deployment/cronjob.Dockerfile

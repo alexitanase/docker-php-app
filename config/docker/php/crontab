@@ -1,0 +1,1 @@
+* * * * * php /app/cron.php --command=process_events_finished >> /app/cron.log 2>&1

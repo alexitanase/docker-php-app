@@ -1,0 +1,81 @@
+.kt-svg-icon g [fill] {
+    fill: #ec0000;
+}
+.kt-aside-menu .kt-menu__nav>.kt-menu__item>.kt-menu__heading .kt-menu__link-icon svg g [fill], .kt-aside-menu .kt-menu__nav>.kt-menu__item>.kt-menu__link .kt-menu__link-icon svg g [fill] {
+    fill: #ec000099;
+}
+.kt-aside-menu .kt-menu__nav>.kt-menu__item.kt-menu__item--here>.kt-menu__heading .kt-menu__link-icon svg g [fill], .kt-aside-menu .kt-menu__nav>.kt-menu__item.kt-menu__item--here>.kt-menu__link .kt-menu__link-icon svg g [fill] {
+    fill: #ec000099;
+}
+.kt-aside-menu .kt-menu__nav>.kt-menu__item.kt-menu__item--here>.kt-menu__heading .kt-menu__link-text, .kt-aside-menu .kt-menu__nav>.kt-menu__item.kt-menu__item--here>.kt-menu__link .kt-menu__link-text {
+    color: #ec000099;
+}
+.kt-aside-menu .kt-menu__nav>.kt-menu__item:not(.kt-menu__item--parent):not(.kt-menu__item--open):not(.kt-menu__item--here):not(.kt-menu__item--active):hover>.kt-menu__heading .kt-menu__link-text, .kt-aside-menu .kt-menu__nav>.kt-menu__item:not(.kt-menu__item--parent):not(.kt-menu__item--open):not(.kt-menu__item--here):not(.kt-menu__item--active):hover>.kt-menu__link .kt-menu__link-text {
+    color: #ec000099;
+}
+.kt-aside-menu .kt-menu__nav>.kt-menu__item:not(.kt-menu__item--parent):not(.kt-menu__item--open):not(.kt-menu__item--here):not(.kt-menu__item--active):hover>.kt-menu__heading .kt-menu__link-icon svg g [fill], .kt-aside-menu .kt-menu__nav>.kt-menu__item:not(.kt-menu__item--parent):not(.kt-menu__item--open):not(.kt-menu__item--here):not(.kt-menu__item--active):hover>.kt-menu__link .kt-menu__link-icon svg g [fill] {
+    fill: #ec000099;
+}
+.kt-subheader .kt-subheader__main .kt-subheader__breadcrumbs .kt-subheader__breadcrumbs-link.kt-subheader__breadcrumbs-link--active {
+    color: #ec000099;
+}
+.kt-aside__brand .kt-aside__brand-tools svg g [fill] {
+    fill: #ec0000;
+}
+.kt-aside-menu .kt-menu__nav>.kt-menu__item.kt-menu__item--open>.kt-menu__heading .kt-menu__link-text, .kt-aside-menu .kt-menu__nav>.kt-menu__item.kt-menu__item--open>.kt-menu__link .kt-menu__link-text {
+    color: #ec000099;
+}
+.kt-aside-menu .kt-menu__nav>.kt-menu__item.kt-menu__item--open>.kt-menu__heading .kt-menu__link-icon svg g [fill], .kt-aside-menu .kt-menu__nav>.kt-menu__item.kt-menu__item--open>.kt-menu__link .kt-menu__link-icon svg g [fill] {
+    fill: #ec000099;
+}
+.kt-aside-menu .kt-menu__nav>.kt-menu__item .kt-menu__submenu .kt-menu__item.kt-menu__item--active>.kt-menu__heading .kt-menu__link-text, .kt-aside-menu .kt-menu__nav>.kt-menu__item .kt-menu__submenu .kt-menu__item.kt-menu__item--active>.kt-menu__link .kt-menu__link-text {
+    color: #ec000099;
+}
+.kt-aside-menu .kt-menu__nav>.kt-menu__item .kt-menu__submenu .kt-menu__item.kt-menu__item--active>.kt-menu__heading .kt-menu__link-bullet.kt-menu__link-bullet--dot>span, .kt-aside-menu .kt-menu__nav>.kt-menu__item .kt-menu__submenu .kt-menu__item.kt-menu__item--active>.kt-menu__link .kt-menu__link-bullet.kt-menu__link-bullet--dot>span {
+    background-color: #ec000099;
+}
+.kt-font-brand {
+    color: #ec000099!important;
+}
+.dataTables_wrapper .pagination .page-item:hover>.page-link {
+    background: #ec000099;
+    color: #fff;
+}
+.kt-aside-menu .kt-menu__nav>.kt-menu__item .kt-menu__submenu .kt-menu__item:not(.kt-menu__item--parent):not(.kt-menu__item--open):not(.kt-menu__item--here):not(.kt-menu__item--active):hover>.kt-menu__heading .kt-menu__link-bullet.kt-menu__link-bullet--dot>span, .kt-aside-menu .kt-menu__nav>.kt-menu__item .kt-menu__submenu .kt-menu__item:not(.kt-menu__item--parent):not(.kt-menu__item--open):not(.kt-menu__item--here):not(.kt-menu__item--active):hover>.kt-menu__link .kt-menu__link-bullet.kt-menu__link-bullet--dot>span {
+    background-color: #ec000099;
+}
+.kt-aside-menu .kt-menu__nav>.kt-menu__item .kt-menu__submenu .kt-menu__item:not(.kt-menu__item--parent):not(.kt-menu__item--open):not(.kt-menu__item--here):not(.kt-menu__item--active):hover>.kt-menu__heading .kt-menu__link-text, .kt-aside-menu .kt-menu__nav>.kt-menu__item .kt-menu__submenu .kt-menu__item:not(.kt-menu__item--parent):not(.kt-menu__item--open):not(.kt-menu__item--here):not(.kt-menu__item--active):hover>.kt-menu__link .kt-menu__link-text {
+    color: #ec000099;
+}
+.dataTables_wrapper .pagination .page-item.active>.page-link {
+    background: #ec0000;
+    color: #fff;
+}
+.kt-header .kt-header__topbar .kt-header__topbar-item .kt-header__topbar-icon svg g [fill] {
+    fill: #ec0000;
+}
+.nav-tabs.nav-tabs-line.nav-tabs-line-brand.nav.nav-tabs .nav-link:hover, .nav-tabs.nav-tabs-line.nav-tabs-line-brand.nav.nav-tabs .nav-link.active, .nav-tabs.nav-tabs-line.nav-tabs-line-brand a.nav-link:hover, .nav-tabs.nav-tabs-line.nav-tabs-line-brand a.nav-link.active {
+    color: #ec000099;
+    border-bottom: 1px solid #ec000099;
+}
+.kt-notification .kt-notification__item:hover .kt-notification__item-details .kt-notification__item-title {
+    color: #ec000099;
+}
+.kt-header-menu .kt-menu__nav>.kt-menu__item:hover:not(.kt-menu__item--here):not(.kt-menu__item--active)>.kt-menu__link .kt-menu__link-text, .kt-header-menu .kt-menu__nav>.kt-menu__item.kt-menu__item--hover:not(.kt-menu__item--here):not(.kt-menu__item--active)>.kt-menu__link .kt-menu__link-text {
+    color: #ec000099;
+}
+.kt-wizard-v4 .kt-wizard-v4__nav .kt-wizard-v4__nav-items .kt-wizard-v4__nav-item[data-ktwizard-state=current] .kt-wizard-v4__nav-body .kt-wizard-v4__nav-number {
+    color: #fff;
+    background-color: #ec0000;
+}
+.kt-wizard-v4 .kt-wizard-v4__nav .kt-wizard-v4__nav-items .kt-wizard-v4__nav-item[data-ktwizard-state=current] .kt-wizard-v4__nav-body .kt-wizard-v4__nav-label .kt-wizard-v4__nav-label-title {
+    color: #ec0000;
+}
+.kt-wizard-v4 .kt-wizard-v4__nav .kt-wizard-v4__nav-items .kt-wizard-v4__nav-item .kt-wizard-v4__nav-body .kt-wizard-v4__nav-number {
+    color: #ec000099;
+}
+.nav-tabs.nav-tabs-line.nav.nav-tabs .nav-link:hover g [fill], .nav-tabs.nav-tabs-line.nav.nav-tabs .nav-link.active g [fill], .nav-tabs.nav-tabs-line a.nav-link:hover g [fill], .nav-tabs.nav-tabs-line a.nav-link.active g [fill] {
+    -webkit-transition: fill 0.3s ease;
+    transition: fill 0.3s ease;
+    fill: #ec0000;
+}

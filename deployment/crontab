@@ -1,0 +1,7 @@
+SHELL=/bin/bash
+BASH_ENV=/container.env
+
+# m h dom mon dow   user   command
+* * * * * /app/cron-exec.sh minute
+0 * * * * /app/cron-exec.sh hour
+0 5 * * * /app/cron-exec.sh day

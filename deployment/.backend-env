@@ -1,0 +1,10 @@
+CI_ENVIRONMENT=development
+REDIS=redis:6379
+DATABASE_DSN="mysql:host=pe129576-001.eu.clouddb.ovh.net;port=35719;dbname=redline"
+DATABASE_USER=redline
+DATABASE_PASS=Uk12Sxn6sqx0YUW
+WEBSOCKET_SERVER=https://feedhunt.bet/
+STREAMING_PATH_V1=https://feedhunt.bet/v1/hls-live/
+STREAMING_PATH_V2=https://feedhunt.bet/v2/hls-live/
+STREAMING_PATH_V3=https://feedhunt.bet/v3/hls-live/
+STREAMING_PATH_V4=https://feedhunt.bet/v4/hls-live/
